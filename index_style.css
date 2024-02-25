@@ -1,0 +1,155 @@
+body {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav article article"
+    "footer footer footer";
+    grid-template-rows:  1fr; /* увеличение высоты строк */
+    grid-template-columns: 20% 1fr 15%;
+    grid-gap: 10px;
+    height: 150vh;
+    margin: 0;
+  }
+
+  #Header {
+    grid-area: header;
+    background-color: DarkBlue;
+    color: white;
+    padding: 35px;
+    height: 40px;
+    text-align: center;
+    font-family: comic sans ms;
+    font-size: 40px;
+    border-radius: 20px; /* добавление закругления углов */
+    overflow: hidden; /* чтобы предотвратить появление содержимого за границами закругленных углов */
+  }
+
+  #Article { 
+    grid-area: article;
+    padding: 20px; /* добавлен отступ для article */
+    background-image: url('skeleton/skeleton.jpg');
+    background-size: cover;
+    border-radius: 20px; /* добавление закругления углов */
+    overflow: hidden; /* чтобы предотвратить появление содержимого за границами закругленных углов */
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 250px 250px 250px 250px;
+    padding: 30px;
+    row-gap: 30px;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .grid-item:nth-child(odd) {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .grid-item.skull {
+    background-image: url('skeleton/skull.jpg');
+  }
+
+  .grid-item.trunk {
+    background-image: url('skeleton/trunk.jpg');
+  }
+
+  .grid-item.upper {
+    background-image: url('skeleton/upper_limb.jpg');
+  }
+
+  .grid-item.lower {
+    background-image: url('skeleton/lower_limb.jpg');
+  }
+
+  .grid-item.skulldesc,
+  .grid-item.trunkdesc,
+  .grid-item.upperdesc,
+  .grid-item.lowerdesc {
+    margin-right: 30px;
+    display: inline-block;
+    overflow: auto;
+  }
+
+  .grid-item.skulldesc span,
+  .grid-item.trunkdesc span,
+  .grid-item.upperdesc span,
+  .grid-item.lowerdesc span {
+    font-weight: bold;
+    text-decoration: none;
+    color: MidnightBlue;
+    font-family: VIVIAN, sans-serif;
+  }
+
+  .grid-item.skulldesc p,
+  .grid-item.trunkdesc p,
+  .grid-item.upperdesc p,
+  .grid-item.lowerdesc p {
+    font-weight: normal;
+    color: black;
+    margin: 0; 
+    line-height: 1; 
+    grid-column: span 1; 
+    font-family: modern, sans-serif; 
+  } 
+
+  .grid-item:hover {
+    transform: scale(1.05);
+  }
+
+  #Nav { 
+    grid-area: nav;
+    background: lightyellow; /* Новый фон для навигации */
+    padding: 20px; /* Новый размер отступов */
+    font-family: comic sans ms;
+    font-size: 20px;
+    border-radius: 20px; /* добавление закругления углов */
+    overflow: hidden; /* чтобы предотвратить появление содержимого за границами закругленных углов */
+  }
+
+  .button-container {
+    position: relative; /* изменено на относительное позиционирование */
+    margin-top: 20px;
+    text-align: center; /* центрируем содержимое внутри .button-container */
+    bottom: -5%; /* отступ снизу в процентах от размера содержимого */
+    left:200%; /* положение по горизонтали в центре */
+    transform: translateX(-50%); /* центрируем относительно левого края .button-container */
+  }
+
+  .button {
+    background-color: MediumTurquoise; 
+    color: white;
+    font-family: comic sans ms;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px
+     }
+
+  .button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  #Footer {
+    grid-area: footer;
+    background-color: DarkBlue;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-family: comic sans ms;
+    font-size: 40px;
+    border-radius: 20px; 
+    overflow: hidden; 
+  }
